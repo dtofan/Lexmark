@@ -62,5 +62,7 @@ grails.project.dependency.resolution = {
         compile ':cache:1.0.1'
 		compile ":kickstart-with-bootstrap:0.9.6"
 		compile ":google-visualization:0.6.2"
+		compile ":heroku:1.0.1"
+		compile ':cloud-support:1.0.8'
     }
 }
