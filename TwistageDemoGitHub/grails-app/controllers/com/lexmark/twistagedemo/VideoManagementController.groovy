@@ -4,12 +4,10 @@ import com.videoprovider.model.Video
 import com.videoprovider.model.VideoAsset
 import com.videoprovider.model.VideoScreenshot
 import com.videoprovider.api.VideoApi
-import grails.plugins.springsecurity.Secured
 import groovy.json.JsonSlurper
 
 class VideoManagementController
 {
-	//@Secured(['ROLE_USER'])
 	def index()
 	{
 		print "params: $params"

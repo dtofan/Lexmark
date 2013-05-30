@@ -1,9 +1,9 @@
-grails.servlet.version = "3.0" // Change depending on target container compliance (2.5 or 3.0)
+grails.servlet.version = "2.5" // Change depending on target container compliance (2.5 or 3.0)
 grails.project.class.dir = "target/classes"
 grails.project.test.class.dir = "target/test-classes"
 grails.project.test.reports.dir = "target/test-reports"
-grails.project.target.level = 1.7
-grails.project.source.level = 1.7
+grails.project.target.level = 1.6
+grails.project.source.level = 1.6
 //grails.project.war.file = "target/${appName}-${appVersion}.war"
 
 // uncomment (and adjust settings) to fork the JVM to isolate classpaths
@@ -42,11 +42,12 @@ grails.project.dependency.resolution = {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes e.g.
 
         // runtime 'mysql:mysql-connector-java:5.1.22'
-		runtime 'mysql:mysql-connector-java:5.1.20'
+		//runtime 'mysql:mysql-connector-java:5.1.20'
+		runtime 'postgresql:postgresql:8.4-702.jdbc3'
     }
 
     plugins {
-        runtime ":hibernate:$grailsVersion"
+        //runtime ":hibernate:$grailsVersion"
         runtime ":jquery:1.8.3"
         runtime ":resources:1.1.6"
 
@@ -59,10 +60,12 @@ grails.project.dependency.resolution = {
 
         runtime ":database-migration:1.3.3"
 
+		//compile ':spring-security-core:1.2.7.3'
+		compile ':webxml:1.4.1'
         compile ':cache:1.0.1'
 		compile ":kickstart-with-bootstrap:0.9.6"
 		compile ":google-visualization:0.6.2"
-		compile ":heroku:1.0.1"
-		compile ':cloud-support:1.0.8'
+		compile (":heroku:1.0.1") {exclude 'database-session'}
+		compile ':cloud-support:1.0.11'
     }
 }

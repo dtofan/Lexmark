@@ -1,6 +1,4 @@
-import com.lexmark.twistagedemo.Role
-import com.lexmark.twistagedemo.User
-import com.lexmark.twistagedemo.UserRole
+
 
 class BootStrap
 {
@@ -8,7 +6,7 @@ class BootStrap
 	def init =
 	{  servletContext ->
 
-		if (!User.get(1))
+		/*if (!User.get(1))
 		{
 			def adminRole = new Role(authority: 'ROLE_ADMIN').save(flush: true)
 			def userRole = new Role(authority: 'ROLE_USER').save(flush: true)
@@ -26,7 +24,7 @@ class BootStrap
 			assert User.count() == 4
 			assert Role.count() == 2
 			assert UserRole.count() == 4
-		}
+		}*/
 	}
 
 	def destroy =

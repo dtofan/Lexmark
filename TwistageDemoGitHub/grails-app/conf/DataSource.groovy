@@ -1,4 +1,16 @@
-dataSource
+/*grails
+{
+	mongo
+	{
+		host = "ds037587.mongolab.com"
+		port = 37587
+		username = "admin"
+		password = "monster11"
+		databaseName = "twistage"
+	}
+}*/
+
+/*dataSource
 {
 	pooled = true
 	driverClassName = "com.mysql.jdbc.Driver"
@@ -51,7 +63,7 @@ environments {
 			password = "lsptest"
 		}
 	}
-}
+}*/
 
 
 /*dataSource {
